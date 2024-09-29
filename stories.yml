@@ -1,0 +1,663 @@
+version: "3.1"
+
+stories:
+
+#General stories
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: happy
+  steps:
+  - intent: affirm
+  - action: utter_affirm
+
+- story: unhappy
+  steps:
+  - intent: deny
+  - action: utter_deny
+
+#SURBHI'S CODE
+
+- story: account open path 10
+  steps:
+  - intent: bank_account_open
+  - action: utter_bank_account_open
+  - intent: saving_account
+  - action: utter_saving
+  - intent: digital_mode
+  - action: utter_digital_mode
+  - action: utter_did_that_help
+
+- story: saving account interest rate
+  steps:
+  - intent: interest_rate_savings
+  - action: utter_saving_interest
+
+- story: account open path 11
+  steps:
+  - intent: bank_account_open
+  - action: utter_bank_account_open
+  - intent: current_account
+  - action: utter_current
+  - intent: digital_mode
+  - action: utter_digital_mode
+  - action: utter_did_that_help
+
+
+- story: account open path 20
+  steps:
+  - intent: bank_account_open
+  - action: utter_bank_account_open
+  - intent: saving_account
+  - action: utter_saving
+  - intent: physical_mode
+  - action: utter_physical_mode
+  - action: utter_did_that_help
+
+
+- story: account open path 20
+  steps:
+  - intent: bank_account_open
+  - action: utter_bank_account_open
+  - intent: current_account
+  - action: utter_current
+  - intent: physical_mode
+  - action: utter_physical_mode
+  - action: utter_did_that_help
+
+- story: safety deposit locker
+  steps:
+  - intent: safe_deposit_locker
+  - action: utter_safe_deposit_locker
+
+- story: saving variant path 1
+  steps:
+  - intent: saving_account_variants
+  - action: utter_saving_account_variants
+  - intent: silver
+  - action: utter_silver_savings
+
+- story: saving variant path 2
+  steps:
+  - intent: saving_account_variants
+  - action: utter_saving_account_variants
+  - intent: gold
+  - action: utter_gold_savings
+
+- story: saving variant path 3
+  steps:
+  - intent: saving_account_variants
+  - action: utter_saving_account_variants
+  - intent: diamond
+  - action: utter_diamond_savings
+
+- story: current variant path 1
+  steps:
+  - intent: current_account_variants
+  - action: utter_current_account_variants
+  - intent: silver
+  - action: utter_silver_current
+
+- story: current variant path 2
+  steps:
+  - intent: current_account_variants
+  - action: utter_current_account_variants
+  - intent: gold
+  - action: utter_gold_current
+
+- story: current variant path 3
+  steps:
+  - intent: current_account_variants
+  - action: utter_current_account_variants
+  - intent: diamond
+  - action: utter_diamond_current
+
+- story: current variant path 4
+  steps:
+  - intent: current_account_variants
+  - action: utter_current_account_variants
+  - intent: institutional
+  - action: utter_institutional_current
+
+#ADITYA'S part of code
+
+- story: interest rate path 1
+  steps:
+  - intent: interest_rate
+  - action: utter_ir
+  - intent: Fixed_deposit_ir
+  - action: utter_fd
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_affirm
+
+- story: interest rate path 2
+  steps:
+  - intent: interest_rate
+  - action: utter_ir
+  - intent: Fixed_deposit_ir
+  - action: utter_fd
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_deny
+
+- story: interest rate path 3
+  steps:
+  - intent: interest_rate
+  - action: utter_ir
+  - intent: reccuring_deposit_ir
+  - action: utter_rd
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_affirm
+
+
+- story: interest rate path 4
+  steps:
+  - intent: interest_rate
+  - action: utter_ir
+  - intent: reccuring_deposit_ir
+  - action: utter_rd
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_deny
+
+- story: interest rate path 5
+  steps:
+  - intent: interest_rate
+  - action: utter_ir
+  - intent: non_callable_Fixed_deposit_ir
+  - action: utter_ncfd
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_affirm
+
+
+- story: interest rate path 6
+  steps:
+  - intent: interest_rate
+  - action: utter_ir
+  - intent: non_callable_Fixed_deposit_ir
+  - action: utter_ncfd
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_deny
+
+
+- story: interest rate path 7
+  steps:
+  - intent: interest_rate
+  - action: utter_ir
+  - intent: Tax_saver_Fixed_deposit_ir
+  - action: utter_tsfd
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_affirm
+
+
+- story: interest rate path 8
+  steps:
+  - intent: interest_rate
+  - action: utter_ir
+  - intent: Tax_saver_Fixed_deposit_ir
+  - action: utter_tsfd
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_deny
+
+
+- story: interest rate path 9
+  steps:
+  - intent: fd_info_ir
+  - action: utter_inffd
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_affirm
+
+
+- story: interest rate path 10
+  steps:
+  - intent: fd_info_ir
+  - action: utter_inffd
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_deny
+
+- story: interest rate path 11
+  steps:
+  - intent: rd_info_ir
+  - action: utter_infrd
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_affirm
+
+
+- story: interest rate path 12
+  steps:
+  - intent: rd_info_ir
+  - action: utter_infrd
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_deny
+
+- story: interest rate path 13
+  steps:
+  - intent: tsfd_info_ir
+  - action: utter_inftsfd
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_affirm
+
+
+- story: interest rate path 14
+  steps:
+  - intent: tsfd_info_ir
+  - action: utter_inftsfd
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_deny
+
+- story: interest rate path 15
+  steps:
+  - intent: ncfd_info_ir
+  - action: utter_infncfd
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_affirm
+
+
+- story: interest rate path 16
+  steps:
+  - intent: ncfd_info_ir
+  - action: utter_infncfd
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_deny
+
+#CODE by ANNU
+
+- story: money_transfer path
+  steps:
+  - intent: online_money_transfer
+  - action: utter_money_transfer
+
+- story: neft path 1
+  steps:
+  - intent: neft_transfer
+  - action: utter_neft_transfer
+  - intent: affirm
+  - action: utter_neft_process
+  - intent: affirm
+  - action: utter_neft_eligibility
+  - intent: affirm
+  - action: utter_neft_limits
+
+- story: neft path 2
+  steps:
+  - intent: neft_process
+  - action: utter_neft_process
+  - intent: affirm
+  - action: utter_neft_eligibility
+  - intent: affirm
+  - action: utter_neft_limits
+
+- story: neft path 3
+  steps:
+  - intent: neft_eligibility
+  - action: utter_neft_eligibility
+  - intent: affirm
+  - action: utter_neft_limits
+
+- story: neft path 4
+  steps:
+  - intent: neft_limits
+  - action: utter_neft_limits
+
+- story: neft path 5
+  steps:
+  - intent: neft_credited
+  - action: utter_neft_credited
+  - action: utter_did_that_help
+
+- story: imps path 1
+  steps:
+  - intent: imps_transfer
+  - action: utter_imps_transfer
+  - intent: affirm
+  - action: utter_imps_process
+  - intent: affirm
+  - action: utter_imps_limits
+
+- story: imps path 2
+  steps:
+  - intent: imps_process
+  - action: utter_imps_process
+  - intent: affirm
+  - action: utter_imps_limits
+
+- story: imps path 3
+  steps:
+  - intent: imps_limits
+  - action: utter_imps_limits
+
+- story: imps path 4
+  steps:
+  - intent: imps_credited
+  - action: utter_imps_credited
+  - action: utter_did_that_help
+
+- story: rtgs path 1
+  steps:
+  - intent: rtgs_transfer
+  - action: utter_rtgs_transfer
+  - intent: affirm
+  - action: utter_rtgs_limits
+
+- story: rtgs path 2
+  steps:
+  - intent: rtgs_limits
+  - action: utter_rtgs_limits
+
+- story: upi path 1
+  steps:
+  - intent: upi_transfer
+  - action: utter_upi_transfer
+  - intent: affirm
+  - action: utter_upi_process
+  - intent: affirm
+  - action: utter_upi_limits
+
+- story: upi path 2
+  steps:
+  - intent: upi_process
+  - action: utter_upi_process
+  - intent: affirm
+  - action: utter_upi_limits
+
+- story: upi path 3
+  steps:
+  - intent: upi_limits
+  - action: utter_upi_limits
+
+- story: upi path 4
+  steps:
+  - intent: upi_credited
+  - action: utter_upi_credited
+
+#GURLEEN'S CODE
+
+- story: ask card type then ask credit card path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: card_types
+  - action: utter_card_type
+  - intent: credit_card
+  - action: utter_credit_card
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_affirm
+
+- story: ask card type then ask credit card path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: card_types
+  - action: utter_card_type
+  - intent: credit_card
+  - action: utter_credit_card
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_deny
+
+
+- story: ask card type then ask debit card path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: card_types
+  - action: utter_card_type
+  - intent: debit_card
+  - action: utter_debit_card
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_affirm
+
+- story: ask card type then ask debit card path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: card_types
+  - action: utter_card_type
+  - intent: debit_card
+  - action: utter_debit_card
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_deny
+
+- story: ask credit card path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: credit_card
+  - action: utter_credit_card
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_affirm
+
+- story: ask credit card path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: credit_card
+  - action: utter_credit_card
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_deny
+
+- story: ask debit card path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: debit_card
+  - action: utter_debit_card
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_affirm
+
+- story: ask debit card path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: debit_card
+  - action: utter_debit_card
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_deny
+
+
+- story: ask difference of cards path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: difference_between_cards
+  - action: utter_difference_of_cards
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_affirm
+
+- story: ask difference of cards path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: difference_between_cards
+  - action: utter_difference_of_cards
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_deny
+
+- story: ask cards by shivalik
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: cards_shivalik
+  - action: utter_shivalik_cards
+
+- story: ask rupay classic debit card path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: rupay_classic_debit_card
+  - action: utter_rupay_classic_debit_card
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_affirm
+
+- story: ask rupay classic debit card path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: rupay_classic_debit_card
+  - action: utter_rupay_classic_debit_card
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_deny
+
+- story: ask rupay platinum debit card path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: rupay_platinum_debit_card
+  - action: utter_rupay_platinum_debit_card
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_affirm
+
+- story: ask rupay platinum debit card path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: rupay_platinum_debit_card
+  - action: utter_rupay_platinum_debit_card
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_deny
+
+- story: ask loan
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: loan
+  - action: utter_loan
+  - action: utter_did_that_help
+
+- story: ask loan types then business loan
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: loan_types
+  - action: utter_loan_types
+  - intent: business_loan
+  - action: utter_business_loan
+  - action: utter_did_that_help
+
+- story: ask loan types then personal loan
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: loan_types
+  - action: utter_loan_types
+  - intent: personal_loan
+  - action: utter_personal_loan
+  - action: utter_did_that_help
+
+- story: ask loan types then auto loan
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: loan_types
+  - action: utter_loan_types
+  - intent: auto_loan
+  - action: utter_auto_loan
+  - action: utter_did_that_help
+
+- story: ask loan types then home loan
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: loan_types
+  - action: utter_loan_types
+  - intent: home_loan
+  - action: utter_home_loan
+  - action: utter_did_that_help
+
+- story: ask business loan
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: business_loan
+  - action: utter_business_loan
+  - action: utter_did_that_help
+
+- story: ask personal loan
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: personal_loan
+  - action: utter_personal_loan
+  - action: utter_did_that_help
+
+- story: ask auto loan
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: auto_loan
+  - action: utter_auto_loan
+  - action: utter_did_that_help
+
+- story: ask home loan
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: home_loan
+  - action: utter_home_loan
+  - action: utter_did_that_help
+
+- story: ask nearest branch path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: branch
+  - action: utter_ask_state
+  - intent: branch_up
+  - action: utter_branch_up
+
+- story: ask nearest branch path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: branch
+  - action: utter_ask_state
+  - intent: branch_mp
+  - action: utter_branch_mp
+
+- story: ask nearest branch path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: branch
+  - action: utter_ask_state
+  - intent: branch_uk
+  - action: utter_branch_uk
+
+- story: ask nearest branch path 4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: branch
+  - action: utter_ask_state
+  - intent: state_not_present
+  - action: utter_branch_not present
