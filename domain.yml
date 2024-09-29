@@ -84,7 +84,6 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
-# SURBHI'S part of code
 
   utter_saving_account_variants:
   - text: "Variants of savings account available at Surya are:  \n 1) Silver \n  2) Gold   \n  3) Diamond"
@@ -185,7 +184,6 @@ responses:
             \n 3) Simplified documentation process
             \n 4) Dual key security"
 
-#ADITYA'S part of code
 
   utter_ir:
   - text: "I can provide you the information of interest rates offered by Surya on its Saving's account, FD's, RD's, Tax-saver FD's and non-callable FD's. For which do you want to know the interest rate? "
@@ -232,7 +230,6 @@ responses:
                   5)Enjoy quarterly compounding interest by opting for Re-investment FD  \n
                   6)Higher rate of interest for senior citizens"
 
-#CODE by ANNU
 
   utter_money_transfer:
   - text: "Online Fund Transfer through digital banking channels comes with options like \n 1) NEFT \n 2) RTGS \n 3) IMPS \n 4) UPI
@@ -315,7 +312,6 @@ responses:
   utter_upi_credited:
   - text: "You will get the details of the transactions made in the transaction history. You can check it through you UPI app."
 
-#GURLEEN'S CODE
 
   utter_card_type:
   - text: "Which card do you want to know about : credit or debit?"
